@@ -3,40 +3,30 @@
 using namespace std;
 
 int main(){
-    int a, c, d;
-    int b = 1, i = 0, j;
-    cin >> a;
-    while (i != a){
-        j = 0;
-        c = b;
-        while (j != 3){
-            if (j != 2){
-                cout << c << " ";
+    int a, c, d = 1, e;
+    cin >> a >> c;
+    while (d != c){
+        e = 1;
+        while(e != a + 1){
+            if (a == e){
+                cout << d;
             }
             else{
-                cout << c;
+                cout << d << " ";
             }
-            c = b * c;
-            j++;
-        }
-        j = 0;
-        d = b;
-        c = b;
-        cout << endl;
-        while (j != 3){
-            if (j != 2){
-                cout << c << " ";
+            e++;
+            d++;
+            if(d == c){
+                if (a == e){
+                    cout << d;
+                }
+                else{
+                    cout << d << " ";
+                }
+                break;
             }
-            else{
-                cout << c;
-            }
-            d = b * d;
-            c = d + 1;
-            j++;
         }
         cout << endl;
-        b++;
-        i++;
     }
     return 0;
 }
